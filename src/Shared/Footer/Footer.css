@@ -1,0 +1,14 @@
+.form-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.subscribe {
+  position: absolute;
+  right: 0%;
+}
+
+.newsletter-form {
+  width: 350px;
+  padding: 7px;
+}
