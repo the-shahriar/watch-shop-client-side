@@ -1,0 +1,16 @@
+.home-banner {
+  margin: 30px 80px;
+}
+
+.banner {
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 80%;
+}
+
+.title {
+  line-height: 55px;
+}
