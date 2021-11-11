@@ -5,31 +5,34 @@ import ExploreProducts from './Pages/ExploreProducts/ExploreProducts';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
-    <Router>
-     <Switch>
-      <Route exact path="/">
-        <Home></Home>
-      </Route>
-      <Route path="/home">
-        <Home></Home>
-      </Route>
-      <Route path="/products">
-        <ExploreProducts></ExploreProducts>
-      </Route>
-      <Route path="/register">
-        <Register></Register>
-      </Route>
-      <Route path="/login">
-        <Login></Login>
-      </Route>
-      <Route path="*">
-        <NotFound></NotFound>
-      </Route>
-     </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/products">
+            <ExploreProducts></ExploreProducts>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

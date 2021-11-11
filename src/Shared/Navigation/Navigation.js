@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import {AiOutlineMenu} from "react-icons/ai";
 import {BsCart2} from "react-icons/bs";
+import useAuth from '../../hooks/useAuth';
 
 const Navigation = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const {user, logOut} = useAuth();
 
     return (
         <header>
@@ -59,8 +61,15 @@ const Navigation = () => {
                         </ul>
                         <div className="flex flex-items-center lg:ml-auto">
                             <button><BsCart2 className="mr-2 text-2xl"/></button>
-                            <Link to="/login" className="mx-2 px-4 py-2 bg-gray-600  text-white">Login</Link>
-                            <Link to="/register" className="ml-2 px-4 py-2 bg-blue-500 text-white">Register</Link>
+                            {
+                            user.email ? 
+                                <button onClick={logOut} className="mx-2 px-4 py-2 bg-gray-600  text-white">Logout</button>
+                                :
+                                <div>
+                                    <Link to="/login" className="mx-2 px-4 py-2 bg-gray-600  text-white">Login</Link>
+                                    <Link to="/register" className="ml-2 px-4 py-2 bg-blue-500 text-white">Register</Link>
+                                </div>                            
+                            }   
                         </div>
                     </div>
                 </div>

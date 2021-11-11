@@ -68,13 +68,16 @@ const useFirebase = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
+                setUser(user);
                 saveUser(user.email, user.displayName, 'PUT');
                 setError('');
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
-            }).catch((error) => {
+            })
+            .catch((error) => {
                 setError(error.message);
-            }).finally(() => setIsLoading(false));
+            })
+            .finally(() => setIsLoading(false));
     }
 
     // observer user state
@@ -100,9 +103,8 @@ const useFirebase = () => {
             .then(data => setAdmin(data.admin))
     }, [user?.email])
 
-    const logout = () => {
+    const logOut = () => {
         setIsLoading(true);
-
         signOut(auth).then(() => {
             setUser({});
         })
@@ -133,7 +135,7 @@ const useFirebase = () => {
         registerUser,
         loginUser,
         signInWithGoogle,
-        logout,
+        logOut
     }
 }
 
