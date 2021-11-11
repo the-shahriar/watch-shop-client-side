@@ -4,6 +4,7 @@ import './App.css';
 import ExploreProducts from './Pages/ExploreProducts/ExploreProducts';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       </Route>
       <Route path="/register">
         <Register></Register>
+      </Route>
+      <Route path="/login">
+        <Login></Login>
       </Route>
       <Route path="*">
         <NotFound></NotFound>
