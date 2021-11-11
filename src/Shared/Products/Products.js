@@ -1,5 +1,7 @@
 import React from 'react';
+import Rating from 'react-rating';
 import useProducts from '../../hooks/useProducts';
+import { BsStar, BsStarFill } from "react-icons/bs";
 import './Products.css';
 
 const Products = () => {
@@ -13,13 +15,21 @@ const Products = () => {
             <div className="products grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
                 {
                     randomProducts.map(product => {
-                        const {_id, title, regularPrice, offerPrice, image, brand} = product;
+                        const {_id, title, regularPrice, offerPrice, image, brand, rating} = product;
                         return (
 
                             <div key={_id} className="product text-center p-5">
                                 <img src={image} alt="productImg" />
+                                <h4 className=" font-medium text-blue-500 text-md uppercase">
+                                    {brand}
+                                </h4>
                                 <h4 className="text-xl font-bold">{title}</h4>
-                                <h3 className="font-semibold text-md">Brand: {brand.toUpperCase()}</h3>
+                                <Rating
+                                    initialRating={rating}
+                                    readonly
+                                    emptySymbol={<BsStar  className="text-yellow-500"/>}
+                                    fullSymbol={<BsStarFill className="text-yellow-500"/>}
+                                />
                                  {
                                      offerPrice ?
                                          <p className="font-bold text-xl text-gray-800">${offerPrice} 

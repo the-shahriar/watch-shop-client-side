@@ -4,6 +4,7 @@ import Navigation from '../../Shared/Navigation/Navigation';
 import { FaUserAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { FaLock } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
     return (
@@ -60,6 +61,14 @@ const Register = () => {
                                 <div className="flex -mx-3">
                                     <div className="w-full px-3 mb-5">
                                         <input className="block w-full max-w-xs mx-auto bg-blue-500 hover:bg-blue-400 focus:bg-blue-700 text-white rounded-lg px-5 py-3 text-center cursor-pointer font-semibold" value="REGISTER NOW"/>
+
+                                        <p className="text-gray-700 text-xl text-center">
+                                            or
+                                        </p>
+
+                                        <button className="block w-full py-2 mt-5 border-gray-400 border-2 rounded-sm font-medium text-gray-700 uppercase cursor-pointer focus:outline-none hover:bg-gray-200">
+                                            Continue with <FcGoogle className="text-4xl inline"/> 
+                                        </button>
                                     </div>
                                 </div>
                             </div>
