@@ -11,7 +11,6 @@ const Reviews = () => {
     useEffect(()=>{
         axios.get('http://localhost:5000/reviews')
         .then(result => {
-            console.log(result.data)
             setReviews(result.data);
         })
     },[])
@@ -24,9 +23,9 @@ const Reviews = () => {
             
                 {
                         reviews.map(singleReview => {
-                            const {name, review, rating} = singleReview;
+                            const {_id, name, review, rating} = singleReview;
                             return (
-                                <div className="review p-12">
+                                <div key={_id} className="review p-12">
                                     <Rating
                                         initialRating={rating}
                                         readonly

@@ -47,7 +47,7 @@ const ExploreProducts = () => {
                                                 <p className="font-bold text-xl text-gray-800">${regularPrice}</p>
                                             }
 
-                                            <button className="bg-gray-600 px-4 py-2 text-white mt-3 w-full">Add To Cart</button>
+                                            <button className="bg-gray-600 py-2 text-white mt-3 px-8">Purchase</button>
                                         </div>
                                     </div>
                                 )
