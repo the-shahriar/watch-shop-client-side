@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="sm:flex sm:mt-8">
                         <div className="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between">
                             <div className="flex flex-col">
-                                <img style={{width: "250px"}} src={logo} alt="" />
+                                <img style={{width: "220px"}} src={logo} alt="" />
                                 <p className="text-md font-medium text-gray-500 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing <br /> elit. Hic optio totam similique repudiandae, repellendus <br /> ipsum modi! Voluptates, perspiciatis fugit! Harum ducimus <br /> quisquam dolores minima ullam itaque natus, optio non aliquid.</p>
                                 <div className="flex mt-4">
                                     <BsFacebook className="text-2xl text-gray-600 mr-5"/>
