@@ -59,8 +59,7 @@ const MyOrders = () => {
                                         orders.map(order=> {
                                             const {productId, name, phone, price, quantity, _id} = order;
                                             return (
-                                                <tr>
-                                                    
+                                                <tr key={_id}>
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-500">
                                                             <a href="#home" className="text-blue-600 underline">{productId}</a>

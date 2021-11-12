@@ -19,7 +19,7 @@ const Reviews = () => {
     return (
        <div className="my-36">
             <h2 className="font-bold text-4xl text-center capitalize text-gray-600">Reviews of our valuable clients</h2>
-            <div className="home-banner grid grid-cols-2 md:grid-cols-2 gap-8 mx-auto">
+            <div className="home-banner grid grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
             
                 {
                         reviews.map(singleReview => {

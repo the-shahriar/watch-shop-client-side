@@ -18,7 +18,7 @@ const Review = () => {
 
     return (
         <div className="home-banner">
-            <h2 className="text-3xl ml-7 text-green-700 font-medium uppercase">Feedback are an inspiration</h2>
+            <h2 className="text-3xl ml-7 text-green-700 font-medium uppercase">Feedback are inspiration</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="ml-4 mt-6">
                 <div className="w-3/5 px-3 mb-5">
                     <label htmlFor="" className="text-xs font-semibold px-1">Your Name</label>
