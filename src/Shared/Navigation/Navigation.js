@@ -60,10 +60,13 @@ const Navigation = () => {
                             </li>
                         </ul>
                         <div className="flex flex-items-center lg:ml-auto">
-                            <button><BsCart2 className="mr-2 text-2xl"/></button>
                             {
                             user.email ? 
-                                <button onClick={logOut} className="mx-2 px-4 py-2 bg-gray-600  text-white">Logout</button>
+                                <div className="flex items-center justify-center">
+                                    <p className="font-medium text-md">Welcome, {user.displayName}</p>
+                                    <Link to="/dashboard" className="mx-2 px-4 py-2 bg-blue-600  text-white">Dashboard</Link>
+                                    <button onClick={logOut} className="mx-2 px-4 py-2 bg-gray-600  text-white">Logout</button>
+                                </div>
                                 :
                                 <div>
                                     <Link to="/login" className="mx-2 px-4 py-2 bg-gray-600  text-white">Login</Link>

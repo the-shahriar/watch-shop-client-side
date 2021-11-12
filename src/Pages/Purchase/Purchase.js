@@ -125,7 +125,7 @@ const Purchase = () => {
                                 <input 
                                     {...register("price")} 
                                     type="hidden" 
-                                    defaultValue={offerPrice ? offerPrice : regularPrice} 
+                                    defaultValue={regularPrice} 
                                 />
                                 <input 
                                     {...register("productId")} 

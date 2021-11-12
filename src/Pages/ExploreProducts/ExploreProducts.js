@@ -4,9 +4,15 @@ import Footer from '../../Shared/Footer/Footer';
 import useProducts from '../../hooks/useProducts';
 import Rating from 'react-rating';
 import {BsStar, BsStarFill} from "react-icons/bs";
+import { useHistory } from 'react-router';
 
 const ExploreProducts = () => {
     const [products] = useProducts();
+    const history = useHistory();
+
+    const handlePurchase = id => {
+        history.push(`/purchase/${id}`);
+    }
 
     return (
         <div>
@@ -47,7 +53,7 @@ const ExploreProducts = () => {
                                                 <p className="font-bold text-xl text-gray-800">${regularPrice}</p>
                                             }
 
-                                            <button className="bg-gray-600 py-2 text-white mt-3 px-8">Purchase</button>
+                                            <button onClick={()=> handlePurchase(_id)} className="bg-gray-600 py-2 text-white mt-3 px-8">Purchase</button>
                                         </div>
                                     </div>
                                 )

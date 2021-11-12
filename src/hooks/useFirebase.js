@@ -51,10 +51,10 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const destination = location?.state?.from || '/';
-                history.replace(destination);
                 setError('');
-
+                const destination = location?.state?.from || '/home';
+                history.replace(destination);
+               
             })
             .catch((error) => {
                 setError(error.message);
@@ -71,7 +71,7 @@ const useFirebase = () => {
                 setUser(user);
                 saveUser(user.email, user.displayName, 'PUT');
                 setError('');
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/home';
                 history.replace(destination);
             })
             .catch((error) => {
@@ -140,4 +140,3 @@ const useFirebase = () => {
 }
 
 export default useFirebase;
-
