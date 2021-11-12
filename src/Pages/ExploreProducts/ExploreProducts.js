@@ -25,7 +25,7 @@ const ExploreProducts = () => {
                             products?.map(product => {
                                 const {_id, image, title, stock, rating, regularPrice, offerPrice, description, brand} = product
                                 return(
-                                    <div className="product">
+                                    <div key={_id} className="product">
                                         <img src={image} alt="" />
                                         <div className="product-info p-8">
                                             <h4 className=" font-medium text-blue-500 text-md uppercase">
@@ -40,7 +40,7 @@ const ExploreProducts = () => {
                                                 fullSymbol={<BsStarFill className="text-yellow-500"/>}
                                             />
 
-                                            <p className="text-gray-800 font-medium my-3">{description.slice(0, 155)}</p>
+                                            <p className="text-gray-800 font-medium my-3">{description}</p>
 
                                             {
                                                 offerPrice ?

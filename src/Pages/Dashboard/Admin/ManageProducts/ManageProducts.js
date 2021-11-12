@@ -72,7 +72,7 @@ const ManageProducts = () => {
                                                         {offerPrice}
                                                     </td>
                                                     <td className="text-sm">
-                                                        <button onClick={()=> handleUpdateProduct(_id)} className="bg-gray-600 px-4 py-2 text-white md:ml-4 ">Update</button>
+                                                        <button onClick={()=> handleUpdateProduct(_id)} className="bg-blue-600 px-4 py-2 text-white md:ml-4 ">Update</button>
                                                         <button onClick={()=> handleDeleteProduct(_id)} className="bg-gray-600 px-4 py-2 text-white md:ml-4 ">Cancel</button>
                                                     </td>
                                                     
