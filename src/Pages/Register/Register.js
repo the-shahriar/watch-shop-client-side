@@ -55,7 +55,7 @@ const Register = () => {
                                         <label htmlFor="" className="text-xs font-semibold px-1">Name</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><FaUserAlt className="mdi mdi-email-outline text-gray-400 text-lg" /></div>
-                                            <input onBlur={handleOnBlur} name="name" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeHolder="John Smith" required />
+                                            <input onBlur={handleOnBlur} name="name" type="text" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="John Smith" required />
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@ const Register = () => {
                                         <label htmlFor="" className="text-xs font-semibold px-1">Email</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><HiMail className="mdi mdi-email-outline text-gray-400 text-lg" /></div>
-                                            <input onBlur={handleOnBlur} name="email" type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeHolder="johnsmith@example.com" required/>
+                                            <input onBlur={handleOnBlur} name="email" type="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="johnsmith@example.com" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ const Register = () => {
                                             {                                                    isLoading ?
                                                 <Spinner />
                                                 :
-                                                <input onBlur={handleOnBlur} name="password" type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeHolder="************" required/>
+                                                <input onBlur={handleOnBlur} name="password" type="password" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="************" required/>
                                             } 
                                         </div>
                                         

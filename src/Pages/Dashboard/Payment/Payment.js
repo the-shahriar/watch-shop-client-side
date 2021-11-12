@@ -2,8 +2,8 @@ import React from 'react';
 
 const Payment = () => {
     return (
-        <div>
-            
+        <div className="home-banner">
+            <h2 className="text-center font-medium uppercase text-3xl text-green-700 mt-32">Payment feature are comming soon.</h2>
         </div>
     );
 };
