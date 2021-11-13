@@ -12,7 +12,7 @@ const Banner = () => {
                     <button className="px-5 py-3 bg-blue-600 text-white">Shop Now</button>
                 </div>
                 <div>
-                    <img style={{width: '90%'}} src={bannerImage} alt="" />
+                    <img className="banner-image" src={bannerImage} alt="" />
                 </div>
             </div>
         </div>

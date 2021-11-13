@@ -12,29 +12,29 @@ const Features = () => {
                 <div>
                     <img style={{width: '95%'}} src={featureImage} alt="feature" />
                 </div>
-                <div className="grid grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <div className="mb-12">
                             <img src={img1} alt="" />
                             <h3 className="font-semibold text-xl">Build Quality and Design</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam hic possimus molestias porro laborum nam.</p>
+                            <p>And we hoped a deep roar would bellow from a gleaming example of exquisite design, superior build quality and space-age technology.</p>
                         </div>
                         <div>
                             <img src={img2} alt="" />
-                            <h3 className="font-semibold text-xl">Excellent battery life</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a facilis velit deserunt corrupti voluptatum.</p>
+                            <h3 className="font-semibold text-xl">Excellent Battery Life</h3>
+                            <p>Charging is improving, faster and more convenient. But you can make some adjustments here and there to help you squeeze out every last bit of juice, and together they might just help your phone to keep going as long as you do.</p>
                         </div>
                     </div>
                     <div>
                         <div className="mb-12">
                             <img src={img3} alt="" />
                             <h3 className="font-semibold text-xl">Better Battery Life</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo iusto rem quia qui fuga labore?</p>
+                            <p>Charging is improving, faster and more convenient. But you can make some adjustments here and there to help you squeeze out every last bit of juice.</p>
                         </div>
                         <div>
                             <img src={img4} alt="" />
-                            <h3 className="font-semibold text-xl">Accurate activity tracking</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, perspiciatis! Asperiores porro quam animi iure?</p>
+                            <h3 className="font-semibold text-xl">Accurate Activity Tracking</h3>
+                            <p>And we hoped a deep roar would bellow from a gleaming example of exquisite design, superior build quality and space-age technology.</p>
                         </div>
                     </div>
                 </div>

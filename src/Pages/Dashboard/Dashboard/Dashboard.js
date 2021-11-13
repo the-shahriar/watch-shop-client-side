@@ -50,17 +50,17 @@ const Dashboard = () => {
                                 <ul className="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
                                     <li className="mr-3 flex-1">
                                         <Link to={`${url}`} className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-green-500">
-                                            <i className="fas fa-tasks pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">My Orders</span>
+                                            <i className="fas fa-tasks pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">My Orders</span>
                                         </Link>
                                     </li>
                                     <li className="mr-3 flex-1">
                                         <Link to={`${url}/manage-orders`} className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-pink-500">
-                                            <i className="fas fa-tasks pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Manage All Orders</span>
+                                            <i className="fas fa-tasks pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Manage All Orders</span>
                                         </Link>
                                     </li>
                                     <li className="mr-3 flex-1">
                                         <Link to={`${url}/manage-products`} className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-purple-500">
-                                            <i className="fa fa-envelope pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-600 md:text-gray-400 block md:inline-block">Manage All Products</span>
+                                            <i className="fa fa-envelope pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-white md:text-gray-400 block md:inline-block">Manage All Products</span>
                                         </Link>
                                     </li>
                                     <li className="mr-3 flex-1">

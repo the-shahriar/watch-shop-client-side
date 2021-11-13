@@ -17,7 +17,7 @@ const Products = () => {
 
     return (
         <div className="home-banner">
-            <h2 className="font-bold text-4xl text-gray-700 text-center">Production For Displaying The Text, <br /> Number With Good Clarity.</h2>
+            <h2 className="font-bold md:text-4xl text-2xl text-gray-700 text-center">Production For Displaying The Text, <br /> Number With Good Clarity.</h2>
             <div className="products grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
                 {
                     randomProducts.map(product => {

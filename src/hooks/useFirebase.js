@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import initializeFirebaseApp from '../Firebase/firebase.init';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, getIdToken, signOut } from "firebase/auth";
-import axios from 'axios';
 
 
 // initialize firebase app
@@ -12,7 +11,6 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
     const [admin, setAdmin] = useState(false);
-    const [verifyAdmin, setVerifyAdmin] = useState(false);
     const [token, setToken] = useState('');
 
     const auth = getAuth();

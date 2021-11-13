@@ -14,3 +14,21 @@
 .title {
   line-height: 55px;
 }
+
+.banner-image {
+  width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-banner {
+    margin: 60px 15px 15px 15px;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .banner-image {
+    width: 100%;
+  }
+}

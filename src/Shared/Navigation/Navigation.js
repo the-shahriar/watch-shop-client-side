@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import {AiOutlineMenu} from "react-icons/ai";
 import useAuth from '../../hooks/useAuth';
+import './Navigation.css';
 
 const Navigation = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
@@ -26,7 +27,7 @@ const Navigation = () => {
                     </div>
                     <div
                         className={
-                        "lg:flex flex-grow items-center" +
+                        "lg:flex flex-grow flex-wrap -ml-2 md:ml-0 items-center" +
                         (navbarOpen ? " flex" : " hidden")
                         }
                         id="example-navbar-danger"
@@ -62,7 +63,7 @@ const Navigation = () => {
                             {
                             user.email ? 
                                 <div className="flex items-center justify-center">
-                                    <p className="font-medium text-md">Welcome, {user.displayName}</p>
+                                    <p className="user-name font-medium text-md">Welcome, {user.displayName}</p>
                                     <Link to="/dashboard" className="mx-2 px-4 py-2 bg-blue-600  text-white">Dashboard</Link>
                                     <button onClick={logOut} className="mx-2 px-4 py-2 bg-gray-600  text-white">Logout</button>
                                 </div>

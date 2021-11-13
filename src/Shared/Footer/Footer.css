@@ -12,3 +12,9 @@
   width: 350px;
   padding: 7px;
 }
+
+@media only screen and (max-width: 600px) {
+  .newsletter-form {
+    width: 100%;
+  }
+}
