@@ -15,7 +15,7 @@ const MyOrders = () => {
 
     // delete order from database
     const handleCancelOrder = id => {
-        const proceed = window.confirm("Are you sure want to delete?");
+        const proceed = window.confirm("Are you sure?");
         if(proceed){
             axios.delete(`http://localhost:5000/orders/${id}`)
             .then(result => {
@@ -51,13 +51,15 @@ const MyOrders = () => {
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
                                         >Price</th>
                                         <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                                        >Status</th>
+                                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
                                         >Action</th> 
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     {
                                         orders.map(order=> {
-                                            const {productId, name, phone, price, quantity, _id} = order;
+                                            const {productId,status, name, phone, price, quantity, _id} = order;
                                             return (
                                                 <tr key={_id}>
                                                     <td className="px-6 py-4 whitespace-nowrap">
@@ -77,6 +79,9 @@ const MyOrders = () => {
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                         {quantity}
+                                                    </td>
+                                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                                        {status}
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                         {price}

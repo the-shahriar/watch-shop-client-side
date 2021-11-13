@@ -33,10 +33,12 @@ const Purchase = () => {
 
     // set value to get the value properly
     useEffect(() => {
-        setValue('email', user.email)
-    }, [user.email, setValue])
+        setValue('email', user.email);
+        setValue('price', offerPrice? offerPrice : regularPrice);
+    }, [user.email, regularPrice, offerPrice, setValue])
 
     const onSubmit = data => {
+        console.log(data);
         axios.post('http://localhost:5000/orders', data)
         .then(result => {
             const confirmation = result.data;
@@ -91,15 +93,10 @@ const Purchase = () => {
 
                         {/* Address form */}
                     <div className="md:mt-28">
-                        {
-                            savedToDb && (
-                                <p className="bg-green-500 px-16 ml-2 py-3 text-white w-max mb-3 text-md">You have successfully purchased the product</p>
-                            ) 
-                        }
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="w-4/5 px-2 mb-5">
                                 <label htmlFor="" className="text-sm font-semibold px-1">Name*</label>
-                                <input {...register("name")} type="text" className="w-full pl-3 py-2 rounded-sm border-2 border-gray-200 outline-none focus:border-blue-500" value={user?.displayName} required />
+                                <input {...register("name")} type="text" className="w-full pl-3 py-2 rounded-sm border-2 border-gray-200 outline-none focus:border-blue-500" value={user?.displayName} readOnly required />
                             </div>
                             <div className="w-4/5 px-2 mb-5">
                                 <label htmlFor="" className="text-sm font-semibold px-1">Phone*</label>
@@ -107,7 +104,11 @@ const Purchase = () => {
                             </div>
                             <div className="w-4/5 px-2 mb-5">
                                 <label htmlFor="" className="text-sm font-semibold px-1">Email*</label>
-                                <input {...register("email")} type="email" className="w-full pl-3 py-2 rounded-sm border-2 border-gray-200 outline-none focus:border-blue-500" defaultValue={user?.email} required />
+                                <input {...register("email")} type="email" className="w-full pl-3 py-2 rounded-sm border-2 border-gray-200 outline-none focus:border-blue-500" defaultValue={user?.email} readOnly required />
+                            </div>
+                            <div className="w-4/5 px-2 mb-5">
+                                <label htmlFor="" className="text-sm font-semibold px-1">Price</label>
+                                <input {...register("price")} type="email" className="w-full pl-3 py-2 rounded-sm border-2 border-gray-200 outline-none focus:border-blue-500" defaultValue={regularPrice} readOnly />
                             </div>
                             <div className="w-4/5 px-2 mb-5">
                                 <label htmlFor="" className="text-sm font-semibold px-1">Quantity</label>
@@ -123,16 +124,21 @@ const Purchase = () => {
                                 <input {...register("address")} type="text" className="w-full pl-3 py-2 rounded-sm border-2 border-gray-200 outline-none focus:border-blue-500" required />
                                 {/* Hidded Inputs */}
                                 <input 
-                                    {...register("price")} 
-                                    type="hidden" 
-                                    defaultValue={regularPrice} 
-                                />
-                                <input 
                                     {...register("productId")} 
                                     type="hidden"
                                     defaultValue={id}
                                 />
+                                <input 
+                                    {...register("status")} 
+                                    type="hidden"
+                                    defaultValue="pending"
+                                />
                             </div>
+                            {
+                                savedToDb && (
+                                    <p className="bg-green-500 px-4 w-3/4 ml-2 py-3 text-white mb-3 text-md">You have successfully purchased the product</p>
+                                ) 
+                            }
                             <button type="submit" className="bg-gray-600 py-2 ml-2 text-white mt-3 px-12">Purchase</button>
                         </form>
                     </div>
