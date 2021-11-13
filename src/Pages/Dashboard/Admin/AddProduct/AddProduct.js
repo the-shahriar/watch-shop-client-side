@@ -33,13 +33,13 @@ const AddProduct = () => {
                     <div className="md:w-1/2 w-full mr-3">
                         <label htmlFor="" className="text-xs font-semibold px-1">Product Title</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="title" type="text" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Smartwatch - Smarty"  />
+                            <input onBlur={handleOnBlur} name="title" type="text" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Smartwatch - Smarty" required />
                         </div>
                     </div>
                     <div className="md:w-1/2 w-full">
                         <label htmlFor="" className="text-xs font-semibold px-1">Brand</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="brand" type="text" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Amazefit, Xiaomi, Apple" />
+                            <input onBlur={handleOnBlur} name="brand" type="text" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Amazefit, Xiaomi, Apple" required/>
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,13 @@ const AddProduct = () => {
                     <div className="w-1/2 mr-3">
                         <label htmlFor="" className="text-xs font-semibold px-1">Regular Price</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="regularPrice" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Regular Price"/>
+                            <input onBlur={handleOnBlur} name="regularPrice" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Regular Price" required/>
                         </div>
                     </div>
                     <div className="w-1/2">
                         <label htmlFor="" className="text-xs font-semibold px-1">Offer Price</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="offerPrice" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Offer Price"/>
+                            <input onBlur={handleOnBlur} name="offerPrice" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Offer Price" required/>
                         </div>
                     </div>
                 </div>
@@ -63,13 +63,13 @@ const AddProduct = () => {
                     <div className="md:w-1/2 w-full mr-3">
                         <label htmlFor="" className="text-xs font-semibold px-1">Number of Stock</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="stock" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Stock"/>
+                            <input onBlur={handleOnBlur} name="stock" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Stock" required/>
                         </div>
                     </div>
                     <div className="md:w-1/2 w-full">
                         <label htmlFor="" className="text-xs font-semibold px-1">Product Image URL</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="image" type="url" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Image URL"/>
+                            <input onBlur={handleOnBlur} name="image" type="url" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Image URL" required/>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ const AddProduct = () => {
                 <div className="md:w-1/2 md:ml-3 md:mb-5">
                         <label htmlFor="" className="text-xs font-semibold px-1">Prouct Rating</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="rating" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Example: 4.4, 4.1, 3.8"/>
+                            <input onBlur={handleOnBlur} name="rating" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Example: 4.4, 4.1, 3.8" required/>
                         </div>
                     </div>
 
