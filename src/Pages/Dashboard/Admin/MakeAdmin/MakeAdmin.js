@@ -6,7 +6,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.put('http://localhost:5000/users/admin', data)
+        axios.put('https://serene-hamlet-29460.herokuapp.com/users/admin', data)
         .then(res => {
             const result = res.data;
             if(result.acknowledged){

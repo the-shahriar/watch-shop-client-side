@@ -17,7 +17,7 @@ const Purchase = () => {
     const { id } = useParams();
     const { user } = useAuth();
     
-    const url = `http://localhost:5000/products/${id}`;
+    const url = `https://serene-hamlet-29460.herokuapp.com/products/${id}`;
     
     useEffect(()=> {
         axios.get(url)
@@ -39,7 +39,7 @@ const Purchase = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://serene-hamlet-29460.herokuapp.com/orders', data)
         .then(result => {
             const confirmation = result.data;
             if(confirmation.acknowledged === true){

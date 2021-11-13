@@ -14,7 +14,7 @@ const AddProduct = () => {
     }
 
     const addNewProduct = e => {
-        axios.post('http://localhost:5000/products', productData)
+        axios.post('https://serene-hamlet-29460.herokuapp.com/products', productData)
         .then(result => {
             const data = result.data;
             if(data.insertedId){

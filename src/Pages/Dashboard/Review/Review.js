@@ -6,7 +6,7 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.put('http://localhost:5000/reviews', data)
+        axios.put('https://serene-hamlet-29460.herokuapp.com/reviews', data)
         .then(result => {
             console.log(result.data);
             if(data.acknowledged){

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo/logo.png';
 import {AiOutlineMenu} from "react-icons/ai";
-import {BsCart2} from "react-icons/bs";
 import useAuth from '../../hooks/useAuth';
 
 const Navigation = () => {

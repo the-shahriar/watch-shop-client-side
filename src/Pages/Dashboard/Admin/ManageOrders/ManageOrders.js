@@ -6,7 +6,7 @@ const ManageOrders = () => {
     const [status, setStatus] = useState(false);
 
     useEffect(()=> {
-        axios.get('http://localhost:5000/orders')
+        axios.get('https://serene-hamlet-29460.herokuapp.com/orders')
         .then(result => {
             setOrders(result.data);
         })
@@ -16,7 +16,7 @@ const ManageOrders = () => {
     const handleCancelOrder = id => {
         const proceed = window.confirm("Are you sure want to delete?");
         if(proceed){
-            axios.delete(`http://localhost:5000/orders/${id}`)
+            axios.delete(`https://serene-hamlet-29460.herokuapp.com/orders/${id}`)
             .then(result => {
                 const data = result.data;
                 if (data.deletedCount) {
@@ -30,7 +30,7 @@ const ManageOrders = () => {
 
     // update order status
     const handleUpdateOrder = id => {
-        axios.put(`http://localhost:5000/orders/${id}`)
+        axios.put(`https://serene-hamlet-29460.herokuapp.com/orders/${id}`)
         .then(result => {
             const data = result.data;
             if(data.modifiedCount > 0){

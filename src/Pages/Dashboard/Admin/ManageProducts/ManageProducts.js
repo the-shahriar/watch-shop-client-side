@@ -9,9 +9,9 @@ const ManageProducts = () => {
 
     // delete order from database
     const handleDeleteProduct = id => {
-        const proceed = window.confirm("Are you sure want to delete?");
+        const proceed = window.confirm("Are you sure?");
         if(proceed){
-            axios.delete(`http://localhost:5000/products/${id}`)
+            axios.delete(`https://serene-hamlet-29460.herokuapp.com/products/${id}`)
             .then(result => {
                 const data = result.data;
                 if (data.deletedCount) {

@@ -7,7 +7,7 @@ const MyOrders = () => {
     const { user } = useAuth();
 
     useEffect(()=> {
-        axios.get(`http://localhost:5000/orders/${user.email}`)
+        axios.get(`https://serene-hamlet-29460.herokuapp.com/orders/${user.email}`)
         .then(result => {
             setOrders(result.data);
         })
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleCancelOrder = id => {
         const proceed = window.confirm("Are you sure?");
         if(proceed){
-            axios.delete(`http://localhost:5000/orders/${id}`)
+            axios.delete(`https://serene-hamlet-29460.herokuapp.com/orders/${id}`)
             .then(result => {
                 const data = result.data;
                 if (data.deletedCount) {
