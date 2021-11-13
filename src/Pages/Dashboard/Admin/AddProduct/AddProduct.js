@@ -77,14 +77,14 @@ const AddProduct = () => {
                 <div className="md:w-1/2 md:ml-3 md:mb-5">
                         <label htmlFor="" className="text-xs font-semibold px-1">Prouct Rating</label>
                         <div className="flex">
-                            <input onBlur={handleOnBlur} name="rating" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Example: 4.4, 4.1, 3.8" required/>
+                            <input onBlur={handleOnBlur} name="rating" type="number" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Example: 1, 2, 3, 4, 5" required/>
                         </div>
                     </div>
 
                 <div className="md:w-1/2 md:ml-3">
                     <label htmlFor="" className="text-xs font-semibold px-1">Product Description</label>
                     <div>
-                        <textarea onBlur={handleOnBlur} name="decription" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Description" cols="3" rows="5"></textarea>
+                        <textarea onBlur={handleOnBlur} name="description" className="w-full pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Description" cols="3" rows="5"></textarea>
                     </div>
                 </div>
 
